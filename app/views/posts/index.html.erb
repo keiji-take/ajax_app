@@ -1,0 +1,18 @@
+
+
+<h1>TopPage</h1>
+<%= link_to '新規投稿', '/posts/new' %>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post_date">
+    投稿日:<%= post.created_at %>
+    </div>
+    <div class="post_content">
+      コメント:<%= post.content %>
+    </div>
+  </div>
+
+<% end %>
+
+
