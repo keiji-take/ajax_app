@@ -2,17 +2,17 @@
 
 <h1>AjaxApp</h1>
 
-<%= form_with url: "/posts", method: :post, id: "form" do |form| %>
- <%= form.text_field :centent %>
+<%= form_with url: "/posts", method: :post,id: "form" do |form| %>
+ <%= form.text_field :content %>
  <%= form.submit '投稿する', id: "submit" %>
 <% end %>
 
 <% @posts.each do |post| %>
-  <div class="post">
-    <div class="post_date">
-    投稿日:<%= post.created_at %>
+  <div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
+    <div class="post-date">
+      投稿日:<%= post.created_at %>
     </div>
-    <div class="post_content">
+    <div class="post-content">
       コメント:<%= post.content %>
     </div>
   </div>
