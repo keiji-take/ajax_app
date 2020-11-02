@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #なぜここでこれらを定義するのか？
   # →HTTPメソッドそれぞれに役割があり、getだとデータの取得。postだとデータの送信(主に新規登録)を意味する
   post 'posts', to: 'posts#create'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'posts/:id', to: 'posts#checked'
 
 end
 
