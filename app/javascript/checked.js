@@ -1,11 +1,12 @@
 
+
 function check() {
   const posts = document.querySelectorAll(".post");
   posts.forEach(function(post){
     if (post.getAttribute("data-load") != null){
       return null;
     }
-    post.setAttribute("data-load", "true")
+    post.setAttribute("data-load", "true");
     post.addEventListener("click", () => {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
@@ -15,7 +16,7 @@ function check() {
       // onloadメソッドは受信が成功したときに呼び出されるメソッド
       XHR.onload = () => {
         if (XHR.status != 200){
-          alert(`Error${XHR.status}: ${XHR.statusText}`);
+          alert(`Error ${XHR.status}: ${XHR.statusText}`);
           return null;
         }
         const item = XHR.response.post;
@@ -30,5 +31,5 @@ function check() {
 }
 setInterval(check, 1000);
 // window（ページ）をload（読み込み）した時に実行
-window.addEventListener("load", check);
+// window.addEventListener("load", check);
 
