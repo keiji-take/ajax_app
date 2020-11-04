@@ -17,10 +17,10 @@ function memo() {
       const HTML = `
         <div class="post" data-id=${item.id}>
           <div class="post-date">
-            投稿日時：${item.created_at}
+            投稿日：${item.created_at}
           </div>
           <div class="post-content">
-          ${item.content}
+            コメント：${item.content}
           </div>
         </div>`;
       list.insertAdjacentHTML("afterend", HTML);
