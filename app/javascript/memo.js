@@ -29,4 +29,4 @@ function memo() {
     e.preventDefault();
   });
  }
- window.addEventListener("load", memo);
+//  window.addEventListener("load", memo);
